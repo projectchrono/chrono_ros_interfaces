@@ -43,7 +43,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   # vehicle
 	msg/vehicle/DriverInputs.msg
 
-  # robot
+  # robot viper
   msg/robot/viper/Viper.msg
   msg/robot/viper/ViperDCMotorControl.msg
   msg/robot/viper/ViperDriver.msg
@@ -51,6 +51,15 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/robot/viper/ViperMotorStallTorque.msg
   msg/robot/viper/ViperSteeringCommand.msg
   msg/robot/viper/ViperWheelID.msg
+
+  # robot rassor
+  msg/robot/rassor/Rassor.msg
+  msg/robot/rassor/RassorDriver.msg
+  msg/robot/rassor/RassorDrumID.msg
+  msg/robot/rassor/RassorWheelID.msg
+  msg/robot/rassor/RassorSpeedDriverArm.msg
+  msg/robot/rassor/RassorSpeedDriverDrum.msg
+  msg/robot/rassor/RassorSpeedDriverWheel.msg  
 
   DEPENDENCIES geometry_msgs std_msgs
 )
