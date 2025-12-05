@@ -41,7 +41,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/Body.msg
 
   # vehicle
-	msg/vehicle/DriverInputs.msg
+  msg/vehicle/DriverInputs.msg
 
   # robot viper
   msg/robot/viper/Viper.msg
@@ -62,6 +62,39 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   msg/robot/rassor/RassorSpeedDriverWheel.msg  
 
   DEPENDENCIES geometry_msgs std_msgs
+)
+
+install(
+  FILES
+    msg/vehicle/DriverInputs.msg
+  DESTINATION
+    share/${PROJECT_NAME}/msg
+)
+
+install(
+  FILES
+    msg/robot/viper/Viper.msg
+    msg/robot/viper/ViperDCMotorControl.msg
+    msg/robot/viper/ViperDriver.msg
+    msg/robot/viper/ViperMotorNoLoadSpeed.msg
+    msg/robot/viper/ViperMotorStallTorque.msg
+    msg/robot/viper/ViperSteeringCommand.msg
+    msg/robot/viper/ViperWheelID.msg
+  DESTINATION
+    share/${PROJECT_NAME}/msg
+)
+
+install(
+  FILES
+    msg/robot/rassor/Rassor.msg
+    msg/robot/rassor/RassorDriver.msg
+    msg/robot/rassor/RassorDrumID.msg
+    msg/robot/rassor/RassorWheelID.msg
+    msg/robot/rassor/RassorSpeedDriverArm.msg
+    msg/robot/rassor/RassorSpeedDriverDrum.msg
+    msg/robot/rassor/RassorSpeedDriverWheel.msg
+  DESTINATION
+    share/${PROJECT_NAME}/msg
 )
 
 ament_package()
